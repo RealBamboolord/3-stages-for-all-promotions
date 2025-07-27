@@ -234,7 +234,7 @@
   },
   {
 		"name": "Woodsman II",
-		"prerequisites": ["Shock III","Drill III"],
+		"prerequisites": ["Woodsman"],
 		"uniques": ["Invisible to non-adjacent units <in [Vegetation] tiles>","Can see invisible [Woodsman II] units"],
 		"unitTypes": ["Sword","Gunpowder"],
         "column": 7,
@@ -242,7 +242,7 @@
   },
   {
 		"name": "Woodsman III",
-		"prerequisites": ["Shock III","Drill III"],
+		"prerequisites": ["Woodsman II"],
 		"uniques": ["Can instantly construct a [Reforestation] improvement <requires [1] movement> <for [1] movement> <[3] times>"],
 		"unitTypes": ["Sword","Gunpowder"],
         "column": 7,
