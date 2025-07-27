@@ -1,0 +1,7 @@
+[
+  	{
+		"name": "Reforestation",
+    "terrainsCanBeBuiltOn": ["Grassland","Plains","Hill"],
+		"uniques": ["Turn this tile into a [Forest] tile","Unavailable <in [Hill] tiles> <in tiles without [Grassland]> <in tiles without [Plains]> <in tiles without [Tundra]>","Can be built outside your borders","Excluded from map editor"]
+	},
+]
