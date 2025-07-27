@@ -1,0 +1,106 @@
+[
+  //All units
+  {
+		"name": "Heal Instantly",
+		"uniques": ["[This Unit] heals [50] HP"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Melee Water","Ranged Water","Submarine"],
+		"innerColor": [195,53,43],
+		"outerColor": [253,236,234],
+        "row": 0,
+        "column": 0
+  },
+  {
+		"name": "Heal Instantly II",
+		"prerequisites": ["Heal Instantly"],
+		"uniques": ["[This Unit] heals [65] HP"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Melee Water","Ranged Water","Submarine"],
+		"innerColor": [195,53,43],
+		"outerColor": [253,236,234],
+        "row": 1,
+        "column": 0
+  },
+  {
+		"name": "Heal Instantly III",
+		"prerequisites": ["Heal Instantly II"],
+		"uniques": ["[This Unit] heals [80] HP", "Doing so will consume this opportunity to choose a Promotion"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Melee Water","Ranged Water","Submarine"],
+		"innerColor": [195,53,43],
+		"outerColor": [253,236,234],
+        "row": 2,
+        "column": 0
+  },
+
+  //Ranged + Siege
+  {
+		"name": "Volley",
+		"prerequisites": ["Accuracy I","Barrage I"],
+		"uniques": ["[+50]% Strength <vs cities>"],
+		"unitTypes": ["Siege"],
+        "column": 3,
+        "row": 1
+	},
+  {
+		"name": "Volley II",
+		"prerequisites": ["Volley"],
+		"uniques": ["[+25]% Strength <vs cities>"],
+		"unitTypes": ["Siege"],
+        "column": 3,
+        "row": 2
+	},
+  {
+		"name": "Volley III",
+		"prerequisites": ["Volley II"],
+		"uniques": ["[+25]% Strength <vs cities>"],
+		"unitTypes": ["Siege"],
+        "column": 3,
+        "row": 3
+	},
+	{
+		"name": "Extended Range",
+		"prerequisites": ["Accuracy III","Barrage III","Targeting II","Bombardment II", "Wolfpack II"],
+		"uniques": ["[+1] Range"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
+        "column": 3,
+        "row": 4
+	},
+	{
+		"name": "Extended Range II",
+		"prerequisites": ["Extended Range"],
+		"uniques": ["[+1] Range <when fighting in [Friendly Land] tiles>"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
+        "column": 3,
+        "row": 5
+	},
+	{
+		"name": "Extended Range III",
+		"prerequisites": ["Extended Range II"],
+		"uniques": ["[+1] Range <when fighting in [Foreign Land] tiles>"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
+        "column": 3,
+        "row": 6
+	},
+	{
+		"name": "Indirect Fire",
+		"prerequisites": ["Accuracy III", "Barrage III", "Bombardment II", "Targeting II"],
+		"uniques": ["Ranged attacks may be performed over obstacles"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
+        "column": 3,
+        "row": 7
+	},
+  {
+		"name": "Indirect Fire II",
+		"prerequisites": ["Indirect Fire"],
+		"uniques": ["Can see over obstacles"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
+        "column": 3,
+        "row": 8
+	},
+  {
+		"name": "Indirect Fire III",
+		"prerequisites": ["Indirect Fire II"],
+		"uniques": ["[+50]% Strength <when attacking> <when fighting in [Fort] tiles>","[+50]% Strength <when attacking> <when fighting in [Citadel] tiles>"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
+        "column": 3,
+        "row": 9
+	},
+]
