@@ -407,7 +407,7 @@
 		"uniques": ["[+5] HP when healing"],
 		"unitTypes": ["Fighter", "Bomber", "Helicopter"],
         "column": 21,
-        "row": 4
+        "row": 5
   },
   {
 		"name": "Air Repair III",
@@ -415,7 +415,7 @@
 		"uniques": ["[+5] HP when healing"],
 		"unitTypes": ["Fighter", "Bomber", "Helicopter"],
         "column": 21,
-        "row": 4
+        "row": 6
   },
   {
 		"name": "Mobility",
