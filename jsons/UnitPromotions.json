@@ -38,7 +38,7 @@
 		"unitTypes": ["Siege"],
         "column": 3,
         "row": 1
-	},
+  },
   {
 		"name": "Volley II",
 		"prerequisites": ["Volley"],
@@ -46,7 +46,7 @@
 		"unitTypes": ["Siege"],
         "column": 3,
         "row": 2
-	},
+  },
   {
 		"name": "Volley III",
 		"prerequisites": ["Volley II"],
@@ -54,39 +54,39 @@
 		"unitTypes": ["Siege"],
         "column": 3,
         "row": 3
-	},
-	{
+  },
+  {
 		"name": "Extended Range",
 		"prerequisites": ["Accuracy III","Barrage III","Targeting II","Bombardment II", "Wolfpack II"],
 		"uniques": ["[+1] Range"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
         "column": 3,
         "row": 4
-	},
-	{
+  },
+  {
 		"name": "Extended Range II",
 		"prerequisites": ["Extended Range"],
 		"uniques": ["[+1] Range <when fighting in [Friendly Land] tiles>"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
         "column": 3,
         "row": 5
-	},
-	{
+  },
+  {
 		"name": "Extended Range III",
 		"prerequisites": ["Extended Range II"],
 		"uniques": ["[+1] Range <when fighting in [Foreign Land] tiles>"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water","Submarine"],
         "column": 3,
         "row": 6
-	},
-	{
+  },
+  {
 		"name": "Indirect Fire",
 		"prerequisites": ["Accuracy III", "Barrage III", "Bombardment II", "Targeting II"],
 		"uniques": ["Ranged attacks may be performed over obstacles"],
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
         "column": 3,
         "row": 7
-	},
+  },
   {
 		"name": "Indirect Fire II",
 		"prerequisites": ["Indirect Fire"],
@@ -94,7 +94,7 @@
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
         "column": 3,
         "row": 8
-	},
+  },
   {
 		"name": "Indirect Fire III",
 		"prerequisites": ["Indirect Fire II"],
@@ -102,5 +102,78 @@
 		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Ranged Water"],
         "column": 3,
         "row": 9
-	},
+  },
+  //Melee/Mounted/Armor	
+  {
+		"name": "Amphibious",
+		"prerequisites": ["Shock I", "Drill I"],
+		"uniques": ["Eliminates combat penalty for attacking over a river", "Eliminates combat penalty for attacking across a coast"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 1
+  },
+  {
+		"name": "Amphibious II",
+		"prerequisites": ["Amphibious"],
+		"uniques": ["[+1] Sight <when [Embarked]>", "May attack when embarked"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 2
+  },
+  {
+		"name": "Amphibious III",
+		"prerequisites": ["Amphibious II"],
+		"uniques": ["[1] Movement point cost to disembark", "[1] Movement point cost to embark", "Double movement in [Coast] <for [Denmark] Civilizations>","Can enter ice tiles <for [Denmark] Civilizations>"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 3
+  },
+  {
+		"name": "Charge",
+		"prerequisites": ["Shock II","Drill II"],
+		"uniques": ["[+33]% Strength <vs [Wounded] units>"],
+		"unitTypes": ["Mounted","Armored"],
+        "column": 6,
+        "row": 4
+  },
+  {
+		"name": "Charge II",
+		"prerequisites": ["Charge"],
+		"uniques": ["[+33]% to Flank Attack bonuses","[+17]% Strength <vs [Wounded] units>"],
+		"unitTypes": ["Mounted","Armored"],
+        "column": 6,
+        "row": 5
+  },
+  {
+		"name": "Charge III",
+		"prerequisites": ["Charge II"],
+		"uniques": ["Double movement in [{Featureless} {Grassland}]","Double movement in [{Featureless} {Plains}]"],
+		"unitTypes": ["Mounted","Armored"],
+        "column": 6,
+        "row": 6
+  },
+  {
+		"name": "Besiege",
+		"prerequisites": ["Shock II","Drill II"],
+		"uniques": ["[+50]% Strength <vs cities>"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 7
+  },
+  {
+		"name": "Besiege II",
+		"prerequisites": ["Besiege"],
+		"uniques": ["[+25]% Strength <when defending> <when fighting in [Enemy Land] tiles>"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 7
+  },
+  {
+		"name": "Besiege III",
+		"prerequisites": ["Besiege II"],
+		"uniques": ["[+50]% Strength <vs cities>"],
+		"unitTypes": ["Sword","Gunpowder"],
+        "column": 6,
+        "row": 7
+  },
 ]
