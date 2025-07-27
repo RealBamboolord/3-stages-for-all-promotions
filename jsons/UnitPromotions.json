@@ -238,7 +238,7 @@
 		"uniques": ["Invisible to non-adjacent units <in [Vegetation] tiles>","Can see invisible [Woodsman II] units"],
 		"unitTypes": ["Sword","Gunpowder"],
         "column": 7,
-        "row": 8
+        "row": 9
   },
   {
 		"name": "Woodsman III",
@@ -246,6 +246,700 @@
 		"uniques": ["Can instantly construct a [Reforestation] improvement <requires [1] movement> <for [1] movement> <[3] times>"],
 		"unitTypes": ["Sword","Gunpowder"],
         "column": 7,
-        "row": 8
+        "row": 10
   },
+  {
+		"name": "Medic",
+		"prerequisites": ["Shock I", "Drill I", "Scouting II", "Survivalism II"],
+		"uniques": ["All adjacent units heal [+5] HP when healing", "[-50]% weight to this choice for AI decisions"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout"],
+        "column": 10, // after scout base
+        "row": 1
+  },
+  {
+		"name": "Medic II",
+		"prerequisites": ["Medic"],
+		"uniques": ["[+5] HP when healing <in [Foreign Land] tiles>", "All adjacent units heal [+5] HP when healing"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout"],
+        "column": 10,
+        "row": 2
+  },
+  {
+		"name": "Medic III",
+		"prerequisites": ["Medic II"],
+		"uniques": ["[This Unit] heals [5] HP <upon turn start>", "All adjacent units heal [+5] HP when healing"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout"],
+        "column": 10,
+        "row": 3
+  },
+  //Water Units
+  {
+		"name": "Landing Party",
+		"uniques": ["Eliminates combat penalty for attacking across a coast"],
+		"unitTypes": ["Melee Water"],
+        "column": 12,
+        "row": 4
+  },
+  {
+		"name": "Landing Party II",
+		"prerequisites": ["Landing Party"],
+		"uniques": ["[+20]% Strength <vs [Land] units> <when attacking>", "[This Unit] heals [10] HP <upon defeating a [Land] unit>"],
+		"unitTypes": ["Melee Water"],
+        "column": 12,
+        "row": 5
+  },
+  {
+		"name": "Landing Party III",
+		"prerequisites": ["Landing Party II"],
+		"uniques": ["[+20]% Strength <vs [Land] units>"],
+		"unitTypes": ["Melee Water"],
+        "column": 12,
+        "row": 6
+  },
+  {
+		"name" : "Supply II",
+		"prerequisites": ["Supply"],
+		"uniques": ["All adjacent units heal [+5] HP when healing"],
+		"unitTypes": ["Melee Water", "Ranged Water"],
+        "column": 16,
+        "row": 5
+  },
+  {
+		"name" : "Supply III",
+		"prerequisites": ["Supply II"],
+		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"unitTypes": ["Melee Water", "Ranged Water"],
+        "column": 16,
+        "row": 6
+  },
+  //Air + Helicopter
+  {
+		"name": "Evasion",
+		"prerequisites": ["Siege II", "Bombardment II"],
+		"uniques": ["Damage taken from interception reduced by [50]%", "[+200]% weight to this choice for AI decisions"],
+		"unitTypes": ["Bomber"],
+        "column": 17,
+        "row": 4
+  },
+  {
+		"name": "Evasion II",
+		"prerequisites": ["Siege II", "Bombardment II"],
+		"uniques": ["Damage taken from interception reduced by [50]% <with [25]% chance>"],
+		"unitTypes": ["Bomber","Atomic Bomber"],
+        "column": 17,
+        "row": 5
+  },
+  {
+		"name": "Evasion III",
+		"prerequisites": ["Siege II", "Bombardment II"],
+		"uniques": ["Cannot be intercepted <with [25]% chance>"],
+		"unitTypes": ["Bomber","Atomic Bomber"],
+        "column": 17,
+        "row": 6
+  },
+  {
+		"name": "Air Targeting III",
+		"prerequisites": ["Air Targeting II"],
+		"uniques": ["[+33]% Strength <vs [Water] units>"],
+		"unitTypes": ["Fighter","Bomber"],
+        "column": 20,
+        "row": 3
+  },
+  {
+		"name": "Sortie",
+		"prerequisites": ["Interception II", "Dogfighting II"],
+		"uniques": ["[1] extra interceptions may be made per turn", "[-100]% weight to this choice for AI decisions"],
+		"unitTypes": ["Fighter"],
+        "column": 20,
+        "row": 4
+  },
+  {
+		"name": "Sortie II",
+		"prerequisites": ["Sortie"],
+		"uniques": ["[1] extra interceptions may be made per turn"],
+		"unitTypes": ["Fighter"],
+        "column": 20,
+        "row": 5
+  },
+  {
+		"name": "Sortie III",
+		"prerequisites": ["Sortie II"],
+		"uniques": ["[1] extra interceptions may be made per turn"],
+		"unitTypes": ["Fighter"],
+        "column": 20,
+        "row": 6
+  },
+  {
+		"name": "Operational Range",
+		"prerequisites": ["Interception I", "Dogfighting I", "Siege I", "Bombardment I"],
+		"uniques": ["[+2] Range", "[-90]% weight to this choice for AI decisions"],
+		"unitTypes": ["Fighter","Bomber"],
+        "column": 21,
+        "row": 1
+  },
+  {
+		"name": "Operational Range II",
+		"prerequisites": ["Operational Range"],
+		"uniques": ["[+1] Range", "[+2] Air Interception Range"],
+		"unitTypes": ["Fighter","Bomber"],
+        "column": 21,
+        "row": 2
+  },
+  {
+		"name": "Operational Range III",
+		"prerequisites": ["Operational Range II"],
+		"uniques": ["Can move after attacking", "[+1] Air Interception Range"],
+		"unitTypes": ["Fighter","Bomber"],
+        "column": 21,
+        "row": 3
+  },
+  {
+		"name": "Air Repair",
+		"prerequisites": ["Interception II", "Dogfighting II", "Siege II", "Bombardment II", "Mobility II", "Anti-Armor II"],
+		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"unitTypes": ["Fighter", "Bomber", "Helicopter"],
+        "column": 21,
+        "row": 4
+  },
+  {
+		"name": "Air Repair II",
+		"prerequisites": ["Interception II", "Dogfighting II", "Siege II", "Bombardment II", "Mobility II", "Anti-Armor II"],
+		"uniques": ["[+5] HP when healing"],
+		"unitTypes": ["Fighter", "Bomber", "Helicopter"],
+        "column": 21,
+        "row": 4
+  },
+  {
+		"name": "Air Repair III",
+		"prerequisites": ["Interception II", "Dogfighting II", "Siege II", "Bombardment II", "Mobility II", "Anti-Armor II"],
+		"uniques": ["[+5] HP when healing"],
+		"unitTypes": ["Fighter", "Bomber", "Helicopter"],
+        "column": 21,
+        "row": 4
+  },
+  {
+		"name": "Mobility",
+		"prerequisites": ["Shock II","Drill II","Targeting I",
+			"Bombardment I","Boarding Party I", "Coastal Raider I", "Wolfpack I"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Mounted","Melee Water","Ranged Water","Armored","Submarine"],
+        "column": 22,
+        "row": 0
+  },
+  {
+		"name": "Mobility I",
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Helicopter"],
+        "column": 22,
+        "row": 1
+  },
+
+  {
+		"name": "Mobility II",
+		"prerequisites": ["Mobility I","Mobility"],
+		"uniques": ["[+1] Movement"],
+		"unitTypes": ["Helicopter","Mounted","Melee Water","Ranged Water","Armored","Submarine"],
+        "column": 22,
+        "row": 2
+  },
+  {
+		"name": "Mobility III",
+		"prerequisites": ["Mobility II"],
+		"uniques": ["Transfer Movement to [Civilian]"],
+		"unitTypes": ["Helicopter","Mounted","Melee Water","Ranged Water","Armored","Submarine"],
+        "column": 22,
+        "row": 3
+  },
+  {
+		"name": "Anti-Armor I",
+		"uniques": ["[+25]% Strength <vs [Armored] units>"],
+		"unitTypes": ["Helicopter"],
+        "column": 23,
+        "row": 1
+  },
+  {
+		"name": "Anti-Armor II",
+		"prerequisites": ["Anti-Armor I"],
+		"uniques": ["[+25]% Strength <vs [Armored] units>"],
+		"unitTypes": ["Helicopter"],
+        "column": 23,
+        "row": 2
+  },
+  {
+		"name": "Anti-Armor III",
+		"prerequisites": ["Anti-Armor II"],
+		"uniques": ["[+25]% Strength <vs [Armored] units>"],
+		"unitTypes": ["Helicopter"],
+        "column": 23,
+        "row": 3
+  },
+  //Mixed
+
+  {
+		"name": "Cover I",
+		"uniques": ["[+33]% Strength <vs [Ranged] units> <when defending>", "[-90]% weight to this choice for AI decisions"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege"],
+        "column": 24,
+        "row": 1
+  },
+  {
+		"name": "Cover II",
+		"prerequisites": ["Cover I"],
+		"uniques": ["[+33]% Strength <vs [Ranged] units> <when defending>"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege"],
+        "column": 24,
+        "row": 2
+  },
+  {
+		"name": "Cover III",
+		"prerequisites": ["Cover II"],
+		"uniques": ["[+34]% Strength <vs [Ranged] units> <when defending>"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege"],
+        "column": 24,
+        "row": 3
+  },
+  {
+		"name": "March",
+		"prerequisites": ["Accuracy II","Barrage II","Shock III","Drill III"],
+		"uniques": ["Unit will heal every turn, even if it performs an action"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege","Mounted"],
+        "column": 10,
+        "row": 4
+  },
+  {
+		"name": "March II", //idk what to put here, y'all can give suggestions
+		"prerequisites": ["March"],
+		"uniques": ["May enter foreign tiles without open borders"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege","Mounted"],
+        "column": 10,
+        "row": 5
+  },
+  {
+		"name": "March III",
+		"prerequisites": ["March II"],
+		"uniques": ["[-100]% maintenance costs"],
+		"unitTypes": ["Sword","Gunpowder","Archery","Ranged Gunpowder","Siege","Mounted"],
+        "column": 10,
+        "row": 6
+  },
+  {
+		"name": "Sentry",
+		"prerequisites": ["Accuracy I","Barrage I","Shock II","Drill II","Bombardment I","Targeting I","Boarding Party I","Coastal Raider I"],
+		"uniques": ["[+1] Sight"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Ranged Water","Armored","Melee Water"],
+        "column": 24,
+        "row": 4
+  },
+  {
+		"name": "Sentry II",
+		"prerequisites": ["Sentry"],
+		"uniques": ["[+1] Sight"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Ranged Water","Armored","Melee Water"],
+        "column": 24,
+        "row": 5
+  },
+  {
+		"name": "Sentry III",
+		"prerequisites": ["Sentry II"],
+		"uniques": ["[+1] Sight"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Ranged Water","Armored","Melee Water"],
+        "column": 24,
+        "row": 6
+  },
+  {
+		"name": "Logistics",
+		"prerequisites": ["Accuracy III","Barrage III","Targeting III", "Wolfpack III",
+			"Bombardment III", "Coastal Raider III","Boarding Party III","Siege III", "Mobility II", "Anti-Armor II"],
+		"uniques": ["[1] additional attacks per turn", "Can move after attacking"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Melee Water","Ranged Water","Submarine","Fighter","Bomber","Helicopter"],
+        "column": 25,
+        "row": 4
+  },
+  {
+		"name": "Logistics II",
+		"prerequisites": ["Logistics"],
+		"uniques": ["[This Unit] gains [1] movement <upon damaging a [Ranged] unit>"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Melee Water","Ranged Water","Submarine","Fighter","Bomber","Helicopter"],
+        "column": 25,
+        "row": 5
+  },
+  {
+		"name": "Logistics III",
+		"prerequisites": ["Logistics II"],
+		"uniques": ["[1] additional attacks per turn"],
+		"unitTypes": ["Archery","Ranged Gunpowder","Siege","Melee Water","Ranged Water","Submarine","Fighter","Bomber","Helicopter"],
+        "column": 25,
+        "row": 6
+  },
+  {
+		"name": "Ambush I",
+		"uniques": ["[+33]% Strength <vs [Armored] units>", "[-100]% weight to this choice for AI decisions"],
+		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"],
+        "column": 25,
+        "row": 1
+  },
+  {
+		"name": "Ambush II",
+		"prerequisites": ["Ambush I"],
+		"uniques": ["[+33]% Strength <vs [Armored] units>"],
+		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"],
+        "column": 25,
+        "row": 2
+  },
+  {
+		"name": "Ambush III",
+		"prerequisites": ["Ambush II"],
+		"uniques": ["[+34]% Strength <vs [Armored] units>"],
+		"unitTypes": ["Sword","Gunpowder","Fighter","Bomber"],
+        "column": 25,
+        "row": 3
+  },
+
+  //Unique Promotions and other stuff
+	{
+		"name": "Morale", // Heroic Epic
+		"uniques": ["[+15]% Strength"]
+	},
+	{
+		"name": "Morale II",
+		"prerequisites": ["Morale"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Melee Water","Ranged Water","Submarine","Helicopter","Aircraft Carrier"],
+		"uniques": ["[+15]% Strength"]
+	},
+	{
+		"name": "Morale III",
+		"prerequisites": ["Morale II"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Melee Water","Ranged Water","Submarine","Helicopter","Aircraft Carrier"],
+		"uniques": ["[+15]% Strength"]
+	},
+	{
+		"name": "Great Generals I", // only for Companion Cavalry, Keshik and their subsequent upgrades
+		"uniques": ["[Great General] is earned [50]% faster"]
+	},
+	{
+		"name": "Great Generals II", // only for Samurai and subsequent upgrades (+ Forest Elephant)
+		"prerequisites": ["Great Generals I"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Archery","Armored"],
+		"uniques": ["[Great General] is earned [100]% faster"]
+	},
+	{
+		"name": "Great Generals III",
+		"prerequisites": ["Great Generals II"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Archery","Armored"],
+		"uniques": ["[Great General] is earned [150]% faster"]
+	},
+	{
+		"name": "Quick Study", // only for Keshik and subsequent upgrades
+		"uniques": ["[+50]% XP gained from combat"]
+	},	
+	{
+		"name": "Quick Study II",
+		"prerequisites": ["Quick Study"],
+		"unitTypes": ["Mounted","Archery","Armored"],
+		"uniques": ["[+50]% XP gained from combat"]
+	},	
+	{
+		"name": "Quick Study III",
+		"prerequisites": ["Quick Study II"],
+		"unitTypes": ["Mounted","Archery","Armored"],
+		"uniques": ["[+50]% XP gained from combat"]
+	},
+	{
+		"name": "Haka War Dance", // only for Maori Warrior and subsequent upgrades
+		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"]
+	},
+	{
+		"name": "Haka War Dance II", //Does the unique add itself multiple times? need to test once this is done
+		"prerequisites": ["Haka War Dance"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"]
+	},
+	{
+		"name": "Haka War Dance III",
+		"prerequisites": ["Haka War Dance II"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"]
+	},
+	{
+		"name": "Rejuvenation", // only for Units that have been close to Natural Wonder Fountain of Youth
+		"uniques": ["All healing effects doubled"]
+	},
+	{
+		"name": "Rejuvenation II",
+		"prerequisites": ["Rejuvenation"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Helicopter"],
+		"uniques": ["[+50]% XP gained from combat"]
+	},
+	{
+		"name": "Rejuvenation III",
+		"prerequisites": ["Rejuvenation II"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Scout","Siege","Archery","Ranged Gunpowder","Armored","Helicopter"],
+		"uniques": ["[+15]% Strength"]
+	},
+	{
+		"name": "Slinger Withdraw", // only for Slinger and subsequent upgrades
+		"uniques": ["Withdraws before melee combat <with [80]% chance>"]
+	},
+	{
+		"name": "Slinger Withdraw II",
+		"prerequisites": ["Slinger Withdraw"],
+		"unitTypes": ["Archery","Ranged Gunpowder"],
+		"uniques": ["Can move after attacking"]
+	},
+	{
+		"name": "Slinger Withdraw III",
+		"prerequisites": ["Slinger Withdraw II"],
+		"unitTypes": ["Archery","Ranged Gunpowder"],
+		"uniques": ["[+20]% Strength <when fighting in [Friendly Land] tiles> <when defending>"]
+	},
+	{
+		"name": "Ignore terrain cost",
+		"uniques": ["Ignores terrain cost"]
+	},
+	{
+		"name": "Ignore terrain cost II",
+		"prerequisites": ["Ignore terrain cost"],
+		"unitTypes": ["Scout","Archery","Ranged Gunpowder"],
+		"uniques": ["Can pass through impassable tiles"]
+	},
+	{
+		"name": "Ignore terrain cost III",
+		"prerequisites": ["Ignore terrain cost II"],
+		"unitTypes": ["Scout","Archery","Ranged Gunpowder"],
+		"uniques": ["No defensive terrain penalty","Ignores Zone of Control"]
+	},
+	{
+		"name": "Pictish Courage", // only for Pictish Warrior and subsequent upgrades
+		"uniques": ["No movement cost to pillage", "[+20]% Strength <when fighting in [Foreign Land] tiles>"]
+	},
+	{
+		"name": "Pictish Courage II",
+		"prerequisites": ["Pictish Courage"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+25]% Strength <when fighting in [pillaged] tiles>"]
+	},
+	{
+		"name": "Pictish Courage III",
+		"prerequisites": ["Pictish Courage II"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+20]% Strength <when fighting in [Foreign Land] tiles>"]
+	},
+	{
+		"name": "Home Sweet Home", // only for Mehal Sefari and subsequent upgrades
+		"uniques": ["[+30]% Strength decreasing with distance from the capital"]
+	},
+	{
+		"name": "Home Sweet Home II",
+		"prerequisites": ["Home Sweet Home"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+20]% Strength <when fighting in [Friendly Land] tiles>"]
+	},
+	{
+		"name": "Home Sweet Home III",
+		"prerequisites": ["Home Sweet Home II"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+40]% Strength decreasing with distance from the capital"]
+	},
+    	{
+        	"name": "Devout",
+        	"uniques": ["Can Spread Religion <[1] additional time(s)>"]
+    	},
+    	{
+        	"name": "Devout II",
+		"prerequisites": ["Devout"],
+		"unitTypes": ["Civilian"],
+        	"uniques": ["Can Spread Religion <[1] additional time(s)>"]
+    	},
+    	{
+        	"name": "Devout III",
+		"prerequisites": ["Devout II"],
+		"unitTypes": ["Civilian"],
+        	"uniques": ["Can Spread Religion <[1] additional time(s)>"]
+    	},
+	{
+		"name": "[Mohawk Warrior] ability",
+		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>"]
+	},
+	{
+		"name": "[Mohawk Warrior] ability II",
+		"prerequisites": ["[Mohawk Warrior] ability"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+20]% Strength <when fighting in [Forest] tiles>", "[+20]% Strength <when fighting in [Jungle] tiles>"]
+	},
+	{
+		"name": "[Mohawk Warrior] ability III",
+		"prerequisites": ["[Mohawk Warrior] ability II"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+20]% Strength <when fighting in [Forest] tiles>", "[+20]% Strength <when fighting in [Jungle] tiles>"]
+	},
+	{
+		"name": "[Jaguar] ability",
+		"uniques": ["[+33]% Strength <when fighting in [Forest] tiles>", "[+33]% Strength <when fighting in [Jungle] tiles>", "Heals [25] damage if it kills a unit"]
+	},
+	{
+		"name": "[Jaguar] ability II",
+		"prerequisites": ["[Jaguar] ability"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+20]% Strength <when fighting in [Forest] tiles>", "[+20]% Strength <when fighting in [Jungle] tiles>"]
+	},
+	{
+		"name": "[Jaguar] ability III",
+		"prerequisites": ["[Jaguar] ability II"],
+		"unitTypes": ["Sword","Gunpowder"],
+		"uniques": ["[+20]% Strength <when fighting in [Forest] tiles>", "[+20]% Strength <when fighting in [Jungle] tiles>"]
+	},
+	{
+		"name": "[Persian Immortal] ability",
+		"uniques": ["[+10] HP when healing"]
+	},
+	{
+		"name": "[Persian Immortal] ability II",
+		"prerequisites": ["[Persian Immortal] ability"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+10] HP when healing <in [Friendly Land] tiles>"]
+	},
+	{
+		"name": "[Persian Immortal] ability III",
+		"prerequisites": ["[Persian Immortal] ability II"],
+		"unitTypes": ["Sword","Gunpowder","Mounted","Helicopter"],
+		"uniques": ["Free [Persian Immortal] appears <upon being defeated>"]
+	},
+	{
+		"name": "[Conquistador] ability",
+		"uniques": ["[+100]% Strength <when defending> <when [Embarked]>"]
+	},
+	{
+		"name": "[Conquistador] ability II",
+		"prerequisites": ["[Conquistador] ability"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+2] Movement <when [Embarked]>"]
+	},
+	{
+		"name": "[Conquistador] ability III",
+		"prerequisites": ["[Conquistador] ability II"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+100]% Strength <when defending> <when [Embarked]>"]
+	},
+	{
+		"name": "[Janissary] ability",
+		"uniques": ["Heals [50] damage if it kills a unit", "[+25]% Strength <when attacking>"]
+	},
+	{
+		"name": "[Janissary] ability II",
+		"prerequisites": ["[Janissary] ability"],
+		"unitTypes": ["Gunpowder"],
+		"uniques": ["[+25]% Strength <when attacking>"]
+	},
+	{
+		"name": "[Janissary] ability III",
+		"prerequisites": ["[Janissary] ability II"],
+		"unitTypes": ["Gunpowder"],
+		"uniques": ["Heals [25] damage if it kills a unit", "[+25]% Strength <when attacking>"]
+	},
+	{
+		"name": "[Sipahi] ability",
+		"uniques": ["No movement cost to pillage"]
+	},
+	{
+		"name": "[Sipahi] ability II",
+		"prerequisites": ["[Sipahi] ability"],
+		"unitTypes": ["Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+25]% Strength <when fighting in [pillaged] tiles>"]
+	},
+	{
+		"name": "[Sipahi] ability III",
+		"prerequisites": ["[Sipahi] ability II"],
+		"unitTypes": ["Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+25]% Strength <when attacking>"]
+	},
+	{
+		"name": "[Cossack] ability",
+		"uniques": ["[+50]% Strength <vs [Wounded] units>"]
+	},
+	{
+		"name": "[Cossack] ability II",
+		"prerequisites": ["[Cossack] ability"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+25]% to Flank Attack bonuses","[+15]% Strength <vs [Wounded] units>"]
+	},
+	{
+		"name": "[Cossack] ability III",
+		"prerequisites": ["[Cossack] ability II"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+25]% to Flank Attack bonuses","[+15]% Strength <vs [Wounded] units>"]
+	},
+	{
+		"name": "[Hussar] ability",
+		"uniques": ["[+50]% to Flank Attack bonuses"]
+	},
+	{
+		"name": "[Hussar] ability II",
+		"prerequisites": ["[Hussar] ability"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+25]% to Flank Attack bonuses","[+15]% Strength <vs [Wounded] units>"]
+	},
+	{
+		"name": "[Hussar] ability III",
+		"prerequisites": ["[Hussar] ability II"],
+		"unitTypes": ["Mounted","Armored"],
+		"uniques": ["[+25]% to Flank Attack bonuses","[+15]% Strength <vs [Wounded] units>"]
+	},
+	{
+		"name": "[Norwegian Ski Infantry] ability",
+		"uniques": ["[+25]% Strength <when fighting in [Snow] tiles>",
+			"[+25]% Strength <when fighting in [Tundra] tiles>",
+			"[+25]% Strength <when fighting in [Hill] tiles>",
+			"Double movement in [Snow]",
+			"Double movement in [Tundra]",
+			"Double movement in [Hill]"]
+	},
+	{
+		"name": "[Norwegian Ski Infantry] ability II",
+		"prerequisites": ["[Norwegian Ski Infantry] ability"],
+		"unitTypes": ["Gunpowder"],
+		"uniques": ["[+25]% Strength <when fighting in [Snow] tiles>",
+			"[+25]% Strength <when fighting in [Tundra] tiles>",
+			"[+25]% Strength <when fighting in [Hill] tiles>",]
+	},
+	{
+		"name": "[Norwegian Ski Infantry] ability III",
+		"prerequisites": ["[Norwegian Ski Infantry] ability II"],
+		"unitTypes": ["Gunpowder"],
+		"uniques": ["[+25]% Strength <when fighting in [Snow] tiles>",
+			"[+25]% Strength <when fighting in [Tundra] tiles>",
+			"[+25]% Strength <when fighting in [Hill] tiles>",]
+	},
+	{
+		"name": "[Hakkapeliitta] ability",
+		"uniques": ["Transfer Movement to [Great General]", "[+15]% Strength <when stacked with a [Great General] unit>"]
+	},
+	{
+		"name": "[Hakkapeliitta] ability II",
+		"prerequisites": ["[Hakkapeliitta] ability"],
+		"unitTypes": ["Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[Great General] is earned [50]% faster", "[+10]% Strength <when stacked with a [Great General] unit>"]
+	},
+	{
+		"name": "[Hakkapeliitta] ability III",
+		"prerequisites": ["[Hakkapeliitta] ability II"],
+		"unitTypes": ["Gunpowder","Mounted","Helicopter"],
+		"uniques": ["[+25]% Strength <when stacked with a [Civilian] unit>"]
+	},
+	{
+		"name": "[Zero] ability",
+		"uniques": ["[+33]% Strength <vs [Fighter] units>"]
+	},
+	{
+		"name": "[Zero] ability II",
+		"prerequisites": ["[Zero] ability"],
+		"unitTypes": ["Fighter"],
+		"uniques": ["[+33]% Strength <vs [Fighter] units>"]
+	},
+	{
+		"name": "[Zero] ability III",
+		"prerequisites": ["[Zero] ability II"],
+		"unitTypes": ["Fighter"],
+		"uniques": ["[+33]% Strength <vs [Fighter] units>"]
+	},
+
 ]
