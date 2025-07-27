@@ -652,13 +652,13 @@
 		"name": "Haka War Dance II", //Does the unique add itself multiple times? need to test once this is done
 		"prerequisites": ["Haka War Dance"],
 		"unitTypes": ["Sword","Gunpowder"],
-		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"]
+		"uniques": ["[-20]% Strength for enemy [Military] units in adjacent [All] tiles"]
 	},
 	{
 		"name": "Haka War Dance III",
 		"prerequisites": ["Haka War Dance II"],
 		"unitTypes": ["Sword","Gunpowder"],
-		"uniques": ["[-10]% Strength for enemy [Military] units in adjacent [All] tiles"]
+		"uniques": ["[-30]% Strength for enemy [Military] units in adjacent [All] tiles"]
 	},
 	{
 		"name": "Rejuvenation", // only for Units that have been close to Natural Wonder Fountain of Youth
